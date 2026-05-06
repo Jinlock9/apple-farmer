@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apple-farmer"
+version = "0.1.0"
+description = "Reinforcement learning agent for the Fruit Box / Apple Game."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "apple-farmer" }]
+dependencies = [
+    "numpy>=1.26",
+    "torch>=2.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
